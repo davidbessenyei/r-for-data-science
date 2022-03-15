@@ -1,0 +1,59 @@
+---
+title: "R for Data Science"
+author: "David Bessenyei"
+date: '2022-03-15'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+## 1.4 Prerequisites
+
+```{r}
+install.packages(c("tidyverse","nycflights13", "gapminder", "Lahman"))
+```
+
+```{r}
+library(tidyverse)
+library(nycflights13)
+library(gapminder)
+library(Lahman)
+```
+
+
+# Part I. Explore
+
+## 2 Introduction
+
+## 3 Data visualisation
+
+> R has several systems for making graphs, but ggplot2 is one of the most elegant and most versatile.
+
+```{r}
+mpg
+```
+
+```{r}
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy))
+```
+
+
+
+
+# Part II. Wrangle
+
+# Part III. Program
+
+# Part IV. Model
+
+# Part V. Communicate
+
+
+
+
+
