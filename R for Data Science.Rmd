@@ -42,6 +42,9 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy))
 ```
 
+### 3.2 First steps
+
+
 #### 3.2.3 A graphing template
 
 ```{r eval=FALSE, include=TRUE}
@@ -87,6 +90,39 @@ number_of_records_mpg <- mpg %>%
   .[[1]]
 number_of_records_mpg
 ```
+
+##### 3.2.4.3 What does the drv variable describe? Read the help for ?mpg to find - out.
+
+```{r}
+?mpg
+```
+
+`drv`: the type of drive train, where f = front-wheel drive, r = rear wheel drive, 4 = 4wd
+
+##### 3.2.4.4 Make a scatterplot of hwy vs cyl.
+
+```{r}
+ggplot(mpg, mapping = aes(x = hwy, y = cyl)) +
+  geom_point()
+```
+
+
+##### 3.2.4.5 What happens if you make a scatterplot of class vs drv? Why is the plot not useful?
+
+```{r}
+ggplot(mpg, aes(x = class, y = drv)) +
+  geom_point()
+```
+
+Scatter charts can not be use to to compare 2 categorical variables.
+This charts only reveals whether there is any car in a given class with the different type of drive trains.
+
+### 3.3 Aesthetic mappings
+
+> “The greatest value of a picture is when it forces us to notice what we never expected to see.” — John Tukey
+
+#### 3.3.1 Exercises
+
 
 
 # Part II. Wrangle
